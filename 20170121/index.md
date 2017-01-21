@@ -1,6 +1,4 @@
-# SeaHUG, 21 January 2017
-
-[Return to index][index]
+# 21 January 2017
 
 * **Richard Cook**: [Agenda][agenda]
   * Category Theory for Programmers Part 2 starting on 2/15
