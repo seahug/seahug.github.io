@@ -11,7 +11,7 @@
 
 ## Notes
 
-* Attendance: TBD
+* Attendance: 16 people
 
 [agenda]: RichardCook_SeaHUGAgenda_20170218.pptx
 [halfaya]: https://github.com/halfaya/Seahug/
