@@ -1,4 +1,4 @@
-# 21 January 2017 ([return to index][index])
+# [&larr;][index] 21 January 2017
 
 ## Agenda
 

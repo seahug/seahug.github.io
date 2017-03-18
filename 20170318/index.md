@@ -1,4 +1,4 @@
-# 18 March 2017 ([return to index][index])
+# [&larr;][index] 18 March 2017
 
 ## Agenda
 
