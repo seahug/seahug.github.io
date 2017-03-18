@@ -8,6 +8,8 @@
 * **John Leo**: _Dependent types in GHC_ (preview of BayHac2017 talk) (approx. 50 minutes + 10 minutes' discussion)
 * **Charles Cooper**: _FRP-style high-frequency trading DSL_ (approx. 30 minutes + 10 minutes' discussion)
 
+* **Bartosz Milewski**: _Linear types_ (?)
+
 ## Notes
 
 * Attendance: TBD
