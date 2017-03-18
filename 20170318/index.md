@@ -10,7 +10,7 @@
 
 ## Notes
 
-* Attendance: 18 people
+* Attendance: TBD
 
 [agenda]: RichardCook_SeaHUGAgenda_20170318.pptx
 [index]: ../
