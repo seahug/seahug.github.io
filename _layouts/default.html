@@ -71,6 +71,7 @@
     <header></header>
     <div class="starter-template" id="main" role="main">
       {{ content }}
+      {% include github-comments.html %}
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <script src="{{ "/static/js/bootstrap.min.js" | relative_url }}"></script>
       <script src="{{ "/static/js/ie10-viewport-bug-workaround.js" | relative_url }}"></script>

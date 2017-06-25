@@ -4,5 +4,7 @@ description: Agendas and minutes of SeaHUG monthly meetings
 author: Various authors
 layouts_dir: _layouts
 excerpt_separator: <!--more-->
+# github_comments_repository:  githubId/repositoryName
+
 plugins:
 - jekyll-gist

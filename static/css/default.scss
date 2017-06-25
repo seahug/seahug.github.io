@@ -1,3 +1,6 @@
+---
+# Only the top level Sass file needs front matter (the dashes are enough)
+---
 h1 {
   margin-bottom: 30px;
   font-family: Ubuntu, sans-serif;
@@ -64,3 +67,8 @@ div#main, h1, h2, p {
   padding-top: 0.2em;
   padding-bottom: 0.4em;
 }
+
+@import
+  "gh-comments",
+  "gh-code"
+;
