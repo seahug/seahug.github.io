@@ -1,4 +1,8 @@
-# [&larr;][index] 18 February 2017
+---
+title: SeaHUG - 2017/2/18
+layout: minutes
+---
+# 18 February 2017
 
 ## Agenda
 
@@ -15,4 +19,3 @@
 
 [agenda]: RichardCook_SeaHUGAgenda_20170218.pptx
 [halfaya]: https://github.com/halfaya/Seahug/
-[index]: ../

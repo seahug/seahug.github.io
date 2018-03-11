@@ -1,4 +1,8 @@
-# [&larr;][index] 18 March 2017
+---
+title: SeaHUG - 2017/3/18
+layout: minutes
+---
+# 18 March 2017
 
 ## Agenda
 
@@ -15,4 +19,3 @@
 * Attendance: TBD
 
 [agenda]: RichardCook_SeaHUGAgenda_20170318.pptx
-[index]: ../

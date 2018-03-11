@@ -1,4 +1,8 @@
-# [&larr;][index] 29 July 2017
+---
+title: SeaHUG - 2017/7/29
+layout: minutes
+---
+# 29 July 2017
 
 ## Agenda
 
@@ -11,4 +15,3 @@
 * Attendance: TBD
 
 [describe]: https://github.com/commercialhaskell/describe.git
-[index]: ../

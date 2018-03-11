@@ -1,4 +1,8 @@
-# [&larr;][index] 21 January 2017
+---
+title: SeaHUG - 2017/1/21
+layout: minutes
+---
+# 21 January 2017
 
 ## Agenda
 
@@ -26,4 +30,3 @@
 [literal-haskell-template]: https://github.com/seahug/scoped-type-vars/blob/master/LH.md
 [scoped-type-variables]: https://github.com/seahug/scoped-type-vars
 [turtles-all-the-way-up]: AllanCooper_TurtlesAllTheWayUp.pptx
-[index]: ../

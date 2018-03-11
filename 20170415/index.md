@@ -1,4 +1,8 @@
-# [&larr;][index] 15 April 2017
+---
+title: SeaHUG - 2017/4/15
+layout: minutes
+---
+# 15 April 2017
 
 ## Agenda
 
@@ -9,4 +13,3 @@
 * Attendance: TBD
 
 [agenda]: RichardCook_SeaHUGAgenda_20170415.pptx
-[index]: ../

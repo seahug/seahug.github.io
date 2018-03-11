@@ -1,4 +1,8 @@
-# [&larr;][index] 17 June 2017
+---
+title: SeaHUG - 2017/6/17
+layout: minutes
+---
+# 17 June 2017
 
 ## Agenda
 
@@ -7,5 +11,3 @@
 ## Notes
 
 * No notes
-
-[index]: ../
