@@ -1,6 +1,6 @@
 ---
 title: SeaHUG - Minutes
-layout: default
+layout: minutes
 ---
 * [17 February 2018](20180217)
 * [20 January 2018](20180120)

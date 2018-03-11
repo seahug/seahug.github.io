@@ -25,3 +25,18 @@ body {
 .haskell-logo {
   font-family: Haskell;
 }
+
+#minutes ul {
+  list-style-type: none;
+  background-color: #eee;
+}
+#minutes ul ul {
+  background-color: #ddd;
+  margin: 0 0 0 -40px;
+  padding: 0;
+}
+#minutes ul ul li {
+  font-size: 70%;
+  border: 0 solid silver;
+  border-width: 1px 0 0 0;
+}
