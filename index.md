@@ -9,6 +9,8 @@ page_script: /static/js/home.js
 [Please visit Meetup.com for details for upcoming meetings][meetup]
 {: #upcoming-meetup}
 
+[Monthly Haskell Learners' Group meetings starting 2018/4/4!][learners]
+
 ## Resources
 
 [Courses offered by SeaHUG](/courses)
@@ -17,4 +19,5 @@ page_script: /static/js/home.js
 
 [About SeaHUG](/about)
 
+[learners]: https://www.meetup.com/seahug/events/zdbklpyxgbgb/
 [meetup]: http://www.meetup.com/seahug/
