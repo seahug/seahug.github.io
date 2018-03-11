@@ -39,6 +39,12 @@
     <header></header>
     <div class="starter-template" id="main" role="main">
       {{ content }}
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="/static/js/bootstrap.min.js"></script>
+      <script src="/static/js/ie10-viewport-bug-workaround.js"></script>
+      {% if page.page_script %}
+      <script src="{{ page.page_script }}"></script>
+      {% endif %}
     </div>
     <footer>&copy; 2018, Seattle Area Haskell Users&#39; Group</footer>
   </div>
