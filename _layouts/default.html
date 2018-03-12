@@ -29,10 +29,10 @@
       </div>
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="/">Home</a></li>
-          <li><a href="/courses">Courses</a></li>
-          <li><a href="/minutes">Minutes</a></li>
-          <li><a href="/about">About</a></li>
+          {% if page.url == '/' %}<li class="active">{% else %}<li>{% endif %}<a href="/">Home</a></li>
+          {% if page.url == '/courses/' %}<li class="active">{% else %}<li>{% endif %}<a href="/courses">Courses</a></li>
+          {% if page.url == '/minutes.html' %}<li class="active">{% else %}<li>{% endif %}<a href="/minutes">Minutes</a></li>
+          {% if page.url == '/about.html' %}<li class="active">{% else %}<li>{% endif %}<a href="/about">About</a></li>
         </ul>
       </div>
     </div>
