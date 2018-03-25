@@ -1,8 +1,8 @@
 <ul>
-    {% for post in site.categories.minutes %}
+    {% for post in site.categories.minutes limit:{{include.limit}} %}
     <li>
         <a href="{{ post.url }}">{{ post.date | date: "%a, %b %d, %y" }}</a>
-        {{ post.excerpt }}
+        <p>{{ post.excerpt | strip_html }}</p>
     </li>
     {% endfor %}
 </ul>
