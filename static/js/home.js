@@ -45,7 +45,7 @@ function zeroFill(number, width) {
 function formatDate(d) {
     var s = "";
     s += DAY_NAMES[d.getDay()];
-    s += " ";
+    s += ", ";
     s += d.getDate();
     s += " ";
     s += MONTH_NAMES[d.getMonth()];
@@ -77,7 +77,7 @@ function formatTimezone(d) {
 }
 
 function formatDateTime(d) {
-    return "at " + formatTime(d) + " on " + formatDate(d);
+    return  "on " + formatDate(d) + " at " + formatTime(d);
 }
 
 function fetchNextEvent(url, successCallback, errorCallback) {
@@ -107,9 +107,7 @@ $(function () {
         var url = data.event_url;
         var name = data.name;
         var date = new Date(data.time);
-        var a = $("<a>");
-        a.attr("href", url);
-        a.text("Our next meeting: " + name + " " + formatDateTime(date));
-        $("#upcoming-meetup").html(a);
+        $("#next-event")
+        .html("<p>Next Event: <a href=\"" + url +"\">" + name +"</a></br><span>" + formatDateTime(date) + ".</span></p>");
     });
 });

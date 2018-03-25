@@ -6,8 +6,7 @@ page_script: /static/js/home.js
 # &#57344; SeaHUG
 {: .haskell-logo}
 
-[Please visit Meetup.com for details for upcoming meetings][meetup]
-{: #upcoming-meetup}
+{% include upcoming-meetup.html %}
 
 [Monthly Haskell Learners' Group meetings starting 2018/4/4!][learners]
 
