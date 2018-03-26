@@ -4,7 +4,7 @@ layout: default
 page_script: /static/js/home.js
 ---
 # &#57344; <span>SeaHUG</span>
-{: .haskell-logo}
+{: .haskell-logo }
 Seattle's Haskell User Group since 2012
 {: .sub-heading }
 
@@ -29,7 +29,7 @@ Stay tuned for study group materials, and monthly recapitulations.
 * [Courses offered by SeaHUG](/courses)
 * [Agendas and minutes for monthly meetings](/minutes)
 * [About SeaHUG](/about)
-{:.relaxed}
+{: .relaxed }
 
 [learners]: https://www.meetup.com/seahug/events/zdbklpyxgbgb/
 [meetup]: http://www.meetup.com/seahug/
