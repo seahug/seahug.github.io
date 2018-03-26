@@ -65,3 +65,13 @@ h1#-seahug > span {
   font-weight: bold;
   padding-left: 1em;
 }
+
+/* A relaxed, less angry-looking list style, man */
+.relaxed {
+  list-style-type: none;
+  padding: 0;
+}
+.relaxed li {
+  padding-top: 0.2em;
+  padding-bottom: 0.4em;
+}
