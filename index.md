@@ -24,6 +24,8 @@ Stay tuned for study group materials, and monthly recapitulations.
 
 ## Resources
 
+[Message board on Meetup.com][message-board]
+
 [Courses offered by SeaHUG](/courses)
 
 [Agendas and minutes for monthly meetings](/minutes)
@@ -32,3 +34,4 @@ Stay tuned for study group materials, and monthly recapitulations.
 
 [learners]: https://www.meetup.com/seahug/events/zdbklpyxgbgb/
 [meetup]: http://www.meetup.com/seahug/
+[message-board]: https://www.meetup.com/SEAHUG/messages/boards/
