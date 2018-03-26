@@ -2,7 +2,7 @@
 title: SeaHUG - About
 layout: default
 ---
-# About
+## About
 
 * This is the home of Seattle Area Haskell Users' Group, also known as SeaHUG
 * [Source code on GitHub][github]
