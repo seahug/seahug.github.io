@@ -2,6 +2,6 @@
 title: SeaHUG - Minutes
 layout: minutes
 ---
-## Meeting Minutes
+## Meeting minutes
 
 {% include recent-minutes.html %}
