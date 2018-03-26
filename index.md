@@ -18,7 +18,7 @@ Starting April 4th 2018, SeaHUG is hosting a study group for anyone interested i
 
 {% include recent-minutes.html limit="2" %}
 
-## Learner's Group
+## Learners' Group
 
 Stay tuned for study group materials, and monthly recapitulations.
 
