@@ -32,18 +32,6 @@ body p {
   color: #5E5086;
 }
 
-#minutes ul {
-  list-style-type: none;
-  padding: 0 0 0 1em;
-}
-
-#minutes ul ul {
-  padding: 0 0 0 1em;
-}
-#minutes ul ul li {
-  font-size: .85 em;
-}
-
 div#main, h1, h2, p {
   text-align: left;
 }
