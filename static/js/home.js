@@ -21,18 +21,19 @@ var MONTH_NAMES = [
   "November",
   "December"
 ];
-var EVENT_URL = "https://api.meetup.com/2/events" +
+var UPCOMING_EVENTS_URL = "https://api.meetup.com/2/events" +
   "?offset=0" +
   "&format=json" +
   "&limited_events=False" +
   "&group_urlname=seahug" +
-  "&page=1" +
+  "&photo-host=public" +
+  "&page=5" +
   "&fields=" +
   "&order=time" +
-  "&status=upcoming" +
   "&desc=false" +
+  "&status=upcoming" +
   "&sig_id=9489517" +
-  "&sig=68241f048ca99766f7127955ede3dd0cc20531d4";
+  "&sig=40f5aa124deef9aa22ee964f7b3def3ebc531bd1";
 
 function zeroFill(number, width) {
   var s = number.toString();
@@ -77,10 +78,10 @@ function formatTimezone(d) {
 }
 
 function formatDateTime(d) {
-  return  "on " + formatDate(d) + " at " + formatTime(d);
+  return formatDate(d) + " at " + formatTime(d);
 }
 
-function fetchNextEvent(url, successCallback, errorCallback) {
+function fetchUpcomingEvents(url, successCallback, errorCallback) {
   var ajaxData = {
     dataType: "jsonp",
     method: "get",
@@ -89,7 +90,16 @@ function fetchNextEvent(url, successCallback, errorCallback) {
 
   if (successCallback) {
     ajaxData.success = function (data, status, xhr) {
-      successCallback(data.results[0]);
+      var events = $.map(
+          data.results,
+          function (x) {
+            return {
+              url: x.event_url,
+              name: x.name,
+              time: new Date(x.time)
+            };
+          });
+      successCallback(events);
     };
   }
 
@@ -102,12 +112,53 @@ function fetchNextEvent(url, successCallback, errorCallback) {
   $.ajax(ajaxData);
 }
 
+function firstUpcomingEventBy(events, f) {
+  for (var i = 0; i < events.length; ++i) {
+    var e = events[i];
+    if (f(e)) {
+      return e;
+    }
+  }
+
+  return null;
+}
+
+function nextUpcomingEvents(events) {
+  var upcomingEvents = [];
+
+  // Always include next "General discussion" event
+  var e0 = firstUpcomingEventBy(
+      events,
+      function (e) { return e.name == "General discussion"; });
+  if (e0) { upcomingEvents.push(e0); }
+
+  // Include next event of any other type
+  var e1 = firstUpcomingEventBy(
+      events,
+      function (e) { return e.name != "General discussion"; });
+  if (e1) { upcomingEvents.push(e1); }
+
+  // Make sure they're in the right order!!
+  upcomingEvents.sort(function (a, b) {
+    if (a.time < b.time) { return -1; }
+    if (a.time > b.time) { return 1; }
+    return 0;
+  });
+
+  return upcomingEvents;
+}
+
 $(function () {
-  fetchNextEvent(EVENT_URL, function (data) {
-    var url = data.event_url;
-    var name = data.name;
-    var date = new Date(data.time);
+  fetchUpcomingEvents(UPCOMING_EVENTS_URL, function (events) {
+    var upcomingEvents = nextUpcomingEvents(events);
+    var html = "<ul class=\"relaxed\" style=\"padding-left: 2em\">";
+    for (var i = 0; i < upcomingEvents.length; ++i ) {
+      var e = upcomingEvents[i];
+      html += "<li><a href=\"" + e.url + "\">" + e.name + "</a><br/>";
+      html += "<span>" + formatDateTime(new Date(e.time)) + "</span>";
+    }
+    html += "</ul>";
     $("#next-event")
-    .html("<p>Next Event: <a href=\"" + url +"\">" + name +"</a></br><span>" + formatDateTime(date) + ".</span></p>");
+    .html("<p>Upcoming events:</p>" + html);
   });
 });
