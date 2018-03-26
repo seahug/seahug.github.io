@@ -3,8 +3,7 @@ title: SeaHUG
 layout: default
 page_script: /static/js/home.js
 ---
-# &#57344; <span>SeaHUG</span>
-{: .haskell-logo }
+# <span class="haskell-logo">&#57344;</span> SeaHUG
 Seattle's Haskell User Group since 2012
 {: .sub-heading }
 

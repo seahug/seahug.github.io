@@ -1,5 +1,7 @@
 h1 {
-  margin-bottom: 30px
+  margin-bottom: 30px;
+  font-family: Ubuntu, sans-serif;
+  color: #222222;
 }
 h2 {
   font-family: Ubuntu;
@@ -41,11 +43,6 @@ div#main, h1, h2, p {
   font-family: Ubuntu;
   margin-top: -1em;
   margin-bottom:2em;
-}
-
-h1#-seahug > span {
-  font-family: Ubuntu, sans-serif;
-  color: #222222;
 }
 
 #next-event li span {
