@@ -1,7 +1,7 @@
 title: SeaHUG
+long_title: Seattle Area Haskell Users' Group
 description: Agendas and minutes of SeaHUG monthly meetings
-author: Richard Cook
-author_email: rcook@rcook.org
+author: Various authors
 layouts_dir: _layouts
 excerpt_separator: <!--more-->
 plugins:
