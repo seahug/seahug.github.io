@@ -1,6 +1,6 @@
 ---
 title: SeaHUG - Minutes
-layout: minutes
+layout: default
 ---
 ## Meeting minutes
 

@@ -4,9 +4,14 @@ h1 {
   color: #222222;
 }
 h2 {
-  font-family: Ubuntu;
+  font-family: Ubuntu, sans-serif;
   color: #5E5086;
 }
+h3 {
+  font-family: Ubuntu, sans-serif;
+  color: #5E5086;
+}
+
 li {
   font-size: 16px
 }
