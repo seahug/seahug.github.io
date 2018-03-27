@@ -33,7 +33,12 @@
         <ul class="nav navbar-nav">
           {% if page.url == '/' %}<li class="active">{% else %}<li>{% endif %}<a href="/">Home</a></li>
           {% if page.url == '/courses/' %}<li class="active">{% else %}<li>{% endif %}<a href="/courses">Courses</a></li>
-          {% if page.url == '/minutes.html' %}<li class="active">{% else %}<li>{% endif %}<a href="/minutes">Minutes</a></li>
+          {% if site.categories.articles.size > 0 %}
+            {% if page.url == '/articles.html' %}<li class="active">{% else %}<li>{% endif %}<a href="/articles">Articles</a></li>
+          {% endif %}
+          {% if site.categories.minutes.size > 0 %}
+            {% if page.url == '/minutes.html' %}<li class="active">{% else %}<li>{% endif %}<a href="/minutes">Minutes</a></li>
+          {% endif %}
           {% if page.url == '/about.html' %}<li class="active">{% else %}<li>{% endif %}<a href="/about">About</a></li>
         </ul>
       </div>

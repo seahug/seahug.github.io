@@ -13,9 +13,15 @@ Seattle's Haskell User Group since 2012
 
 Starting April 4th 2018, SeaHUG is hosting a study group for anyone interested in learning the foundations of practical Haskell.  We are currently at capacity for RSVPs, but please join the waiting list on the [meetup page][learners].
 
-## Recent meetings
+{% if site.categories.articles.size > 0 %}
+## Recent articles
+{% include recent-articles.html limit="2" %}
+{% endif %}
 
+{% if site.categories.minutes.size > 0 %}
+## Recent meetings
 {% include recent-minutes.html limit="2" %}
+{% endif %}
 
 ## Learners' Group
 
