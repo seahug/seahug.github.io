@@ -158,7 +158,7 @@ $(function () {
       html += "<span>" + formatDateTime(new Date(e.time)) + "</span>";
     }
     html += "</ul>";
-    $("#next-event")
-    .html("<p>Upcoming events:</p>" + html);
+    $("#upcoming-events")
+      .html("<p>Upcoming events:</p>" + html);
   });
 });

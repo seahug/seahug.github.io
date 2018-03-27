@@ -50,7 +50,7 @@ div#main, h1, h2, p {
   margin-bottom:2em;
 }
 
-#next-event li span {
+#upcoming-events li span {
   font-size: .75em;
   font-weight: bold;
 }
