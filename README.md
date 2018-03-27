@@ -38,7 +38,7 @@ bundle exec rake test
 
 Released under the [MIT License][licence]
 
-[article-live]: http://seattlehaskell.org/yyyy-mm-dd-article-live
+[article-live]: http://seattlehaskell.org/yyyy-mm-dd-article-template
 [article-template]: yyyy-mm-dd-article-template.md
 [licence]: LICENSE
 [minutes-live]: http://seattlehaskell.org/yyyy-mm-dd-minutes
