@@ -18,7 +18,7 @@ Seattle's Haskell User Group since 2012
 
 {% if site.categories.minutes.size > 0 %}
 ## Recent meetings
-{% include recent-minutes.html limit="2" %}
+{% include recent-minutes.html limit="3" %}
 {% endif %}
 
 ## Learners' Group
