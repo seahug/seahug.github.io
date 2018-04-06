@@ -134,7 +134,7 @@ stack ghci
 | `:type`   | Returns the type signature of the given expression                                                 |
 | `:kind`   | Shows the *kind* of a given *type*                                                                 |
 | `:info`   | Returns general info about a given name                                                            |
-| `:!<cmd>` | Shell out to a execute a command                                                                   |
+| `:!<cmd>` | Shell out to execute a command                                                                   |
 | `:edit`   | If you have a source file loaded, this will open your system default editor to the referenced line |
 
 This command will determine the appropriate version of GHC/GHCi to use based on
