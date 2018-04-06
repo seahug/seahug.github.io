@@ -77,7 +77,7 @@ control for your project since you won't want to check binaries in.
 ### AWS Lambda and native binaries
 <small>Rambling aside by Richard</small>
 
-Note that, while [AWS Lambda][aws-lambda], doesn't directly advertise runtime
+Note that, while [AWS Lambda][aws-lambda] doesn't directly advertise runtime
 support for Haskell programs, you can distribute native binaries. By default,
 Stack generates statically-linked binaries which can easily be bundled up and
 deployed to Lambda.
