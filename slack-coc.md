@@ -1,3 +1,7 @@
+---
+title: SeaHUG - Slack code of conduct
+layout: default
+---
 ## SeaHUG Slack code of conduct
 
 ### Welcome!
