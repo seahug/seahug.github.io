@@ -1,7 +1,6 @@
 ---
 title: SeaHUG - Courses
 layout: default
-page_script: /static/js/home.js
 ---
 ## Courses
 

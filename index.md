@@ -18,9 +18,10 @@ Seattle's Haskell User Group since 2012
 
 {% if site.categories.minutes.size > 0 %}
 ## Recent meetings
-{% include recent-minutes.html limit="3" %}
+{% include recent-minutes.html limit="2" %}
 {% endif %}
 
-## Learners' Group
-
-Stay tuned for study group materials, and monthly recapitulations.
+{% if site.categories.learners.size > 0 %}
+## Haskell Learners' Group
+{% include recent-learners.html limit="2" %}
+{% endif %}

@@ -39,6 +39,9 @@
           {% if site.categories.minutes.size > 0 %}
             {% if page.url == '/minutes.html' %}<li class="active">{% else %}<li>{% endif %}<a href="/minutes">Minutes</a></li>
           {% endif %}
+          {% if site.categories.learners.size > 0 %}
+            {% if page.url == '/learners.html' %}<li class="active">{% else %}<li>{% endif %}<a href="/learners">Learners</a></li>
+          {% endif %}
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
