@@ -13,5 +13,6 @@ for RSVPs, but please join the waiting list on the [meetup page][learners].
 
 [bayhac2018]: https://wiki.haskell.org/BayHac2018
 [icfp2018]: https://conf.researchr.org/home/icfp-2018
+[learners]: https://www.meetup.com/seahug/events/zdbklpyxgbgb/
 [seattle-lambda-world]: http://seattle.lambda.world/
 [strange-loop]: https://www.thestrangeloop.com/
