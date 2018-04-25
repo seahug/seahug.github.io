@@ -1,8 +1,9 @@
 ## Announcements
 
-Starting April 4th 2018, SeaHUG is hosting a study group for anyone interested
-in learning the foundations of practical Haskell. We are currently at capacity
-for RSVPs, but please join the waiting list on the [meetup page][learners].
+On April 4th, SeaHUG started a study group for anyone interested
+in learning the foundations of practical Haskell. You can read about what
+we covered [here][april-minutes]. If you are interested in joining, our 
+next meeting is May 2nd; you can [RSVP here][may-rsvp].
 
 ## Other Haskell/FP events
 
@@ -13,6 +14,7 @@ for RSVPs, but please join the waiting list on the [meetup page][learners].
 
 [bayhac2018]: https://wiki.haskell.org/BayHac2018
 [icfp2018]: https://conf.researchr.org/home/icfp-2018
-[learners]: https://www.meetup.com/seahug/events/zdbklpyxgbgb/
+[april-minutes]: http://seattlehaskell.org/learners/2018/04/04/learners-week-1
+[may-rsvp]: https://www.meetup.com/seahug/events/qkvtmpyxhbdb/
 [seattle-lambda-world]: http://seattle.lambda.world/
 [strange-loop]: https://www.thestrangeloop.com/
