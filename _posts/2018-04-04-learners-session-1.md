@@ -6,7 +6,7 @@ categories: learners
 date: 2018-04-04
 ---
 A recap of what we talked about during the first meeting of the all-new
-Haskell Learners' Group meetings in Seattle
+Haskell Learners' Group in Seattle
 
 <!--more-->
 
