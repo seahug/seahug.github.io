@@ -1,5 +1,5 @@
 ---
-title: Haskell Learners' Group (Week 1)
+title: Haskell Learners' Group (Session 1)
 author: Walker Malling and Richard Cook
 layout: learners
 categories: learners
