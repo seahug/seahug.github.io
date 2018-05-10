@@ -1,12 +1,12 @@
 ---
-title: Haskell Learners' Group (Week 1)
+title: Haskell Learners' Group (Session 1)
 author: Walker Malling and Richard Cook
 layout: learners
 categories: learners
 date: 2018-04-04
 ---
 A recap of what we talked about during the first meeting of the all-new
-Haskell Learners' Group meetings in Seattle
+Haskell Learners' Group in Seattle
 
 <!--more-->
 
