@@ -5,61 +5,47 @@ layout: learners
 categories: learners
 date: 2018-06-06
 ---
-
-Minutes of discussion for our third learner's group session.
+Minutes of discussion for our third learners' group session
 
 <!--more-->
 
+### Preamble
 
-Richard opened the meeting with our usual topic: tips for practical development
-
-`ghcid` is an IDE for Haskell developed by Neil Mitchell
-
-`stack install ghcid`
-
-- delegate to ghci
-- takes over terminal
-  - doesn't clutter terminal history
-- don't need to use file watch
-- lacks colorization
-
-Ricahrd_R asked about code completion: Richard demo'd VSCode's code completion
-
-Richard said Haskero is an ide to investigate (maybe for next time)
-
-Walker outlined the roadmap for next few sessions: setting a goal to write a budget application, learning the necessary components of Haskell on the way
-
-Walker invited people to share what they've worked on
-
-Akshay said that he tried working with an http request library in conjunction with an api, but said that it is difficult to read library documentation and get started quickly
-
-Richard_R mentioned that in the JVM/Scala world http requests libraries typically yield a future and asked what abstraction haskell typically uses?
-
-Richard said that he had used both `req` and `wreq` libraries (both are commonly used).  He gave exmaples with httpbin and raised a question regarding whether req/wreq are async or or synchronous. Richard said that, in principle, the use of monadic binding `<-` could be async. Also: Richard likes monomorphic libraries.
-
-Akshay can't see the examples section in the documentation.
-
-Richard showed that the examples sections are hidden by defualt, and said he will buy lolypops for anyone who builds an auto-expander script for the examples section.
-
-Danielle asked a question about deriving functions
-
-Richard talked about language pragmas, for example: how to silence warnings for a particular source file (you can do pragmas per line; one of the most common is `LANGUAGE OverloadedStrings` for use of string literals, e.g. of type `bytestring` or `text`).
-
-There are many deriving libraries `derive generic`
-
-New in ghc `derive via`: derive instances of a typeclass where it is a subclass
-
-Question: regarding property based testing with quickCheck, you need to first define something in order to use quickCheck.
-
-Richard said we'd try to investigate this for next time.
-
-Question: so what to you use to write tests?
-
-Richard said he uses `hspec` for unit testing.
+* Richard opened the meeting with our usual topic: tips for practical development
+  * [ghcid][ghcid] is an IDE for Haskell developed by Neil Mitchell
+  * `stack install ghcid`
+  * Delegates to ghci
+    * Takes over terminal
+    * Doesn't clutter terminal history
+    * Doesn't need to use file watch
+    * Lacks colorization
+* Richard_R asked about code completion: Richard demo'd VSCode's code completion
+* Richard said Haskero is an IDE to investigate (maybe for next time): in fact, Haskero is a VSCode plugin for Haskell which Richard uses a lot
+* Walker outlined the roadmap for next few sessions
+  * Setting a goal to write a budget application
+  * Learning the necessary components of Haskell on the way
+* Walker invited people to share what they've worked on
+* Akshay said that he tried working with an HTTP request library in conjunction with an api, but said that it is difficult to read library documentation and get started quickly
+* Richard_R mentioned that in the JVM/Scala world http requests libraries typically yield a future and asked what abstraction Haskell typically uses?
+* Richard said that he had used both [req][req] and [wreq][wreq] libraries (both are commonly used)
+  * He gave exmaples with using [https://httpbin.org][httpbin] and raised a question regarding whether req/wreq are async or or synchronous
+  * Richard said that, in principle, the use of monadic binding `<-` could be async
+  * Also: Richard likes monomorphic libraries
+* Akshay can't see the examples section in the documentation.
+* Richard showed that the examples sections are hidden by default, and said he will buy lollipops for anyone who builds an auto-expander script for the examples section
+* Danielle asked a question about deriving functions
+* Richard talked about language pragmas
+  * Example: how to silence warnings for a particular source file (you can do pragmas per line; one of the most common is `LANGUAGE OverloadedStrings` for use of string literals, e.g. of type `bytestring` or `text`)
+* There are many language extensions for automatic deriving such as `DeriveGeneric`, `GeneralizedNewtypeDeriving`
+* New in GHC: `DeriveVia`: derive instances of a type class where it is a subclass
+* Question: regarding property-based testing with [QuickCheck][quickcheck], you need to first define something in order to use QuickCheck
+* Richard said we'd try to investigate this for next time
+* Question: so what to you use to write tests?
+  * Richard said he uses `hspec` for unit testing.
 
 ... and therein endeth the preamble.
 
----
+### Topic of the day
 
 Richard opened the pedagogical topic for the day: types and algebraic data types:
 
@@ -177,4 +163,12 @@ Richard addressed sum vs product types.
 
 A type can be a product, or a sum of other types. (Examples in more detail next time).
 
+### In closing
+
 At closing, Richard also mentioned Benjamin Pierce.
+
+[ghcid]: https://github.com/ndmitchell/ghcid
+[httpbin]: https://httpbin.org/
+[quickcheck]: http://hackage.haskell.org/package/QuickCheck
+[req]: http://hackage.haskell.org/package/req
+[wreq]: http://hackage.haskell.org/package/wreq
