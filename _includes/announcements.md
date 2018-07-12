@@ -1,9 +1,11 @@
 ## Announcements
 
+On Thursday, July 19th we'll be welcoming Bartosz Milewski back for a
+third series of lectures on Category Theory.  You can find links to his earlier lectures in our [courses section][courses]. These lectures will also be recorded.  RSVP at [Meetup.com][category-theory].
+
 On April 4th, SeaHUG started a study group for anyone interested
-in learning the foundations of practical Haskell. You can read about what
-we covered [here][april-minutes]. If you are interested in joining, our 
-next meeting is May 2nd; you can [RSVP here][may-rsvp].
+in learning the foundations of practical Haskell. We are halfway through this series; you can read about what
+we covered [here][april-minutes].
 
 ## Other Haskell/FP events
 
@@ -17,3 +19,5 @@ next meeting is May 2nd; you can [RSVP here][may-rsvp].
 [may-rsvp]: https://www.meetup.com/seahug/events/qkvtmpyxhbdb/
 [seattle-lambda-world]: http://seattle.lambda.world/
 [strange-loop]: https://www.thestrangeloop.com/
+[category-theory]: https://www.metup.com/SEAHUG
+[courses]: /courses/
