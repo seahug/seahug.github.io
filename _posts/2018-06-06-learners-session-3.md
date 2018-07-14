@@ -47,13 +47,20 @@ Minutes of discussion for our third learners' group session
 
 ### Topic of the day
 
-Richard opened the pedagogical topic for the day: types and algebraic data types:
+Richard opened the pedagogical topic for the day: types and algebraic data types. Last time we looked at functions:
 
-Last time we looked at functions: single argument functions, curried functions (functions that return functions), as well as function signatures.  But functions operate on values.
+* Single-argument functions
+* Curried functions (functions that return functions)
+* Function signatures
+* Functions operate on values
 
-Use `:info` to investigate types
+We can use `:info` to investigate symbols including types:
 
-`:info Int`
+```
+:info Int
+```
+
+This outputs:
 
 ```haskell
 data Int = GHC.Types.I# GHC.Prim.Int# 	-- Defined in ‘GHC.Types’
@@ -68,15 +75,16 @@ instance Bounded Int -- Defined in ‘GHC.Enum’
 instance Integral Int -- Defined in ‘GHC.Real’
 ```
 
---- 
+Looking at the readout of `:info` on `Int`, Richard embarked on a tangent on Haskell's typographical conventions:
 
-Looking at the readout of `:info` on `Int`, Richard embarked on a tangent on Typographical conventions: why do types start with uppercase letter?
+* Names of types start with uppercase letters
+* Unlike functions and variables which start with lowercase letters: functions and values follow the same naming conventions and syntactic rules
 
-Functions and values must start with lowercase letter. Functions and values follow the same naming conventions and same syntactic rules.
+Why does Haskell use uppercase letters for the names of types? Most likely, the designers of Haskell chose to do this to eliminate ambiguities in the parser.
 
-Special characters like `_` are often used to mark the monadic variant of a function, like `for_`, however you see other conventions like `mapM` or with "prime" (though this is also used to denote a strictly evaluated function).
+Note that special characters like `_` are often used to mark the monadic variant of a function, like `for_`, however you see other conventions like `mapM` or with "prime" (`'`) (though this is also used to denote a strictly evaluated function such as `foldl'`).
 
-Another typographic peculiarity: infix & prefix functions, for example, define an infix function `&&&&&` where
+Another typographic peculiarity: infix and prefix functions. For example, we can define an infix function `&&&&&` where
 
 ```haskell
 > x &&&&& y = x + y
@@ -91,7 +99,7 @@ With an infix function like this, you can use `()` to use it as a prefix functio
 > 30
 ```
 
-Conversely, you can use backticks `` to turn an prefix function into an infix function:
+Conversely, you can use backticks `` ` `` to turn an prefix function into an infix function:
 
 ```haskell
 > &&&&& x y = x + y
@@ -99,7 +107,7 @@ Conversely, you can use backticks `` to turn an prefix function into an infix fu
 > 30
 ```
 
-Why would you do either? It may be useful to think about the grammar of the operation: consider if the function fits a subject - verb - object format; then an infix syntax makes sense.
+Why would you do either? It may be useful to think about the grammar of the operation: consider if the function fits a subject-verb-object format; then the infix syntax makes sense.
 
 ```haskell
 x = map (+) [1, 2, 3]
@@ -114,44 +122,49 @@ map (\f -> f 10) x
 
 ```
 
-Continuing typographical discussion regarding the capitalization of type names: maybe one reason, by contrast, is c++ parser must build up knowledge of whether something is a value or a type, and will take a different parsing path depending on what it encounters; this is also one reason why you have to declare functions and types before you can use them in c++.  Haskell makes a typographical difference between types and values.
+Cue continuing typographical discussion regarding the capitalization of type names: maybe one reason, by contrast, is that a C++ parser must build up knowledge of whether something is a value or a type, and will take a different parsing path depending on what it encounters; this is also one reason why you have to declare functions and types before you can use them in C++. Haskell makes a typographical difference between types and values to avoid this requirement.
 
-In ghc 2020: they plan to turn on language extensions by default (like OverloadedStrings)
-
----
+In GHC 2020: they plan to turn some language extensions on by default (perhaps `OverloadedStrings`, for example), especially the "uncontroversial" ones.
 
 Returning to the topic of types:
 
-`Int` versus `Integer`
-
-`Int` is a 64 bit integer and `Integer` is supposed to model a mathematical integer, its implementation is hidded, but it probably used the `gmp` library
+* `Int` versus `Integer`
+* `Int` is a 64-bit integer (strictly speaking a platform-dependent fixed-precision integer) integer and `Integer` is supposed to model a mathematical integer, its implementation is hidden, though it probably used the [GMP][gmp] library
 
 You can use an alias for a type:
 
-`type Foo = Int`
+```
+type Foo = Int
+```
 
-just so, a `String` is an alias for `[Char]`
+Just so, a `String` is an alias for `[Char]` most likely defined as follows:
 
-`ghc` will tell you this:
+GHCi will tell you this:
 
-`:i String`
-`type String = [Char]`
+```
+:i String
+type String = [Char]
+```
 
 Note the difference between `data` and `type` keywords.
 
-Richard gave several examples of the `data` keyword and mention of data constructors, including recursive data constructors: `:i []` and `:i Maybe`, and `:i Either`
+Richard gave several examples of the `data` keyword and mentioned data constructors, including recursive data constructors: `:i []` and `:i Maybe`, and `:i Either`.
 
 We investigated the type of `Either`
 
-`let x = Left "hello"`
-`:t x`
-`x :: Either [Char] b`
+```
+let x = Left "hello"
+:t x
+x :: Either [Char] b
+```
 
-Note that it is still polymorphic; `b` is not cocrete, it still represents a type variable.
+Note that it is still polymorphic; `b` is not concrete and still represents a type variable.
 
-`data A = B Int`
-`:t B`
-`B :: Int -> A`
+```
+data A = B Int
+:t B
+B :: Int -> A
+```
 
 Note: we'll cover pattern matching next session.
 
@@ -159,15 +172,17 @@ Richard introduced the term "cardinality" of types (roughly, the "size" of the t
 
 Danielle asked: What is a sum type?
 
-Richard addressed sum vs product types. 
+Richard addressed sum vs. product types.
 
-A type can be a product, or a sum of other types. (Examples in more detail next time).
+A type can be a product or a sum of other types.(Examples in more detail next time.
 
 ### In closing
 
-At closing, Richard also mentioned Benjamin Pierce.
+At closing, Richard also mentioned [Benjamin Pierce][benjamin-pierce].
 
+[benjamin-pierce]: http://www.cis.upenn.edu/~bcpierce/
 [ghcid]: https://github.com/ndmitchell/ghcid
+[gmp]: https://gmplib.org/
 [httpbin]: https://httpbin.org/
 [quickcheck]: http://hackage.haskell.org/package/QuickCheck
 [req]: http://hackage.haskell.org/package/req
