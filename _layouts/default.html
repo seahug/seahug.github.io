@@ -9,10 +9,10 @@
   <meta name="description" content="{{ site.long_title }}">
   <meta name="author" content="{{ site.author }}">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="/static/css/bootstrap.css">
-  <link rel="stylesheet" href="/static/css/haskell.font.css">
-  <link rel="stylesheet" href="/static/css/default.css">
-  <link rel="icon" type="image/ico" href="/static/assets/favicon.ico">
+  <link rel="stylesheet" href="{{ "/static/css/bootstrap.css" | relative_url }}" >
+  <link rel="stylesheet" href="{{ "/static/css/haskell.font.css" | relative_url }}" >
+  <link rel="stylesheet" href="{{ "/static/css/default.css" | relative_url }}" >
+  <link rel="icon" type="image/ico" href="{{ "/static/assets/favicon.ico" | relative_url }}">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:700" type="text/css" rel="stylesheet">
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, "js");</script>
@@ -27,20 +27,20 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/"><span class="haskell-logo">&#57344;</span> SeaHUG</a>
+	<a class="navbar-brand" href="{{ "/" | relative_url }}"><span class="haskell-logo">&#57344;</span> SeaHUG</a>
       </div>
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="nav navbar-nav">
-          {% if page.url == '/' %}<li class="active">{% else %}<li>{% endif %}<a href="/">Home</a></li>
-          {% if page.url == '/courses/' %}<li class="active">{% else %}<li>{% endif %}<a href="/courses">Courses</a></li>
+            {% if page.url == '/' %}<li class="active">{% else %}<li>{% endif %}<a href="{{ "/" | relative_url }}">Home</a></li>
+                {% if page.url == '/courses/' %}<li class="active">{% else %}<li>{% endif %}<a href="{{ "/courses" | relative_url }}">Courses</a></li>
           {% if site.categories.articles.size > 0 %}
-            {% if page.url == '/articles.html' %}<li class="active">{% else %}<li>{% endif %}<a href="/articles">Articles</a></li>
+          {% if page.url == '/articles.html' %}<li class="active">{% else %}<li>{% endif %}<a href="{{ "/articles" | relative_url }}">Articles</a></li>
           {% endif %}
           {% if site.categories.minutes.size > 0 %}
-            {% if page.url == '/minutes.html' %}<li class="active">{% else %}<li>{% endif %}<a href="/minutes">Minutes</a></li>
+          {% if page.url == '/minutes.html' %}<li class="active">{% else %}<li>{% endif %}<a href="{{ "/minutes" | relative_url }}">Minutes</a></li>
           {% endif %}
           {% if site.categories.learners.size > 0 %}
-            {% if page.url == '/learners.html' %}<li class="active">{% else %}<li>{% endif %}<a href="/learners">Learners</a></li>
+          {% if page.url == '/learners.html' %}<li class="active">{% else %}<li>{% endif %}<a href="{{ "/learners" | relative_url }}">Learners</a></li>
           {% endif %}
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -72,10 +72,10 @@
     <div class="starter-template" id="main" role="main">
       {{ content }}
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script src="/static/js/bootstrap.min.js"></script>
-      <script src="/static/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="{{ "/static/js/bootstrap.min.js" | relative_url }}"></script>
+      <script src="{{ "/static/js/ie10-viewport-bug-workaround.js" | relative_url }}"></script>
       {% if page.page_script %}
-      <script src="{{ page.page_script }}"></script>
+      <script src="{{ page.page_script | relative_url }}"></script>
       {% endif %}
     </div>
     <footer>&copy; 2018, Seattle Area Haskell Users&#39; Group</footer>
