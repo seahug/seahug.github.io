@@ -19,5 +19,5 @@ we covered [here][april-minutes].
 [may-rsvp]: https://www.meetup.com/seahug/events/qkvtmpyxhbdb/
 [seattle-lambda-world]: http://seattle.lambda.world/
 [strange-loop]: https://www.thestrangeloop.com/
-[category-theory]: https://www.metup.com/SEAHUG
-[courses]: /courses/
+[category-theory]: https://www.meetup.com/SEAHUG
+[courses]: {{ "/courses/" | relative_url }}
