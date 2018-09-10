@@ -1,6 +1,7 @@
 ---
 title: SeaHUG - Category theory for programmers (part 3)
 layout: default
+github_comments_issueid: 3
 ---
 ### Category theory for programmers (part 3)
 
