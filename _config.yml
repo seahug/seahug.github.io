@@ -6,5 +6,5 @@ layouts_dir: _layouts
 excerpt_separator: <!--more-->
 github_comments_repository:  seahug/seahug.github.io-comments
 
-plugins:
+gems:
 - jekyll-gist
