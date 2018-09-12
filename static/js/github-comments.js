@@ -13,7 +13,7 @@ function ShowComments(repo_name, comment_id, page_id)
             if (1 == page_id) {
                 // post button 
                 var url = "https://github.com/" + repo_name + "/issues/" + comment_id + "#new_comment_field";
-                $("#gh-comments-list").append("<form action='" + url + "' rel='nofollow'> <input type='submit' value='Post a comment on Github' /> </form>");
+                $("#gh-comments-list").append("<form action='" + url + "' rel='nofollow'> <input type='submit' value='Post a comment on GitHub' /> </form>");
             }
 
             // Individual comments
@@ -53,10 +53,8 @@ function ShowComments(repo_name, comment_id, page_id)
     });
 }
 
-function DoGithubComments(repo_name, comment_id)
-{
-    $(document).ready(function ()
-    {
-        ShowComments(repo_name, comment_id, 1);
-    });
+function loadGitHubComments(repoName, issueId) {
+  $(() => {
+    ShowComments(repoName, issueId, 1);
+  });
 }
