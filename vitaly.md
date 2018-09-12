@@ -1,15 +1,15 @@
 ---
-title: The Glasgow Haskell Compiler as an exercise in the type theory
+title: The Glasgow Haskell Compiler as an exercise in type theory
 layout: default
 ---
-# The Glasgow Haskell Compiler as an exercise in the type theory
+# The Glasgow Haskell Compiler as an exercise in type theory
 
 * Location: [Indeed, Inc., Russell office, 1301 2nd Avenue, 13th floor, Seattle, WA 98101][location]
 * Time: Thursday 27 September 2018 from 6pm to 8:30pm (PDT), presentation to start at 6:30pm
 
 ## Presenter
 
-Vitaly Bragilevsky is a university lecturer in Computer Science, author of ["Haskell in Depth"][haskell-in-depth], Haskell language committee member (Haskell 2020), invited lecturer at LambdaConf etc.
+Vitaly Bragilevsky is a [university lecturer][sfu] in computer science, author of ["Haskell in Depth"][haskell-in-depth], Haskell language committee member (Haskell 2020), invited lecturer at LambdaConf etc.
 
 ## Overview
 
@@ -27,3 +27,4 @@ A: E-mail or call Tatiana Mukhutdinova: `tatianam at indeed.com`, or call 206-55
 
 [haskell-in-depth]: https://www.manning.com/books/haskell-in-depth
 [location]: https://goo.gl/pny5GK
+[sfu]: http://sfedu.ru/www/stat_pages22.show?p=RR/per_eng/D&params=(p_per_id=%3E2733)
