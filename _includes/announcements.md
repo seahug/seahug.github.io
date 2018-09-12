@@ -1,6 +1,6 @@
 ## Announcements
 
-On Thursday 27 September 2018, [Vitaly Bragilevsky][vitaly], author of ["Haskell in Depth"][haskell-in-depth], will present a talk entitled ["The Glasgow Haskell Compiler as an exercise in the type theory"][vitaly] at Indeed, Inc. in Seattle.
+On Thursday 27 September 2018, [Vitaly Bragilevsky][vitaly], author of ["Haskell in Depth"][haskell-in-depth], will present a talk entitled ["The Glasgow Haskell Compiler as an exercise in type theory"][vitaly] at Indeed, Inc. in Seattle.
 
 On Thursday, July 19th we welcomed Bartosz Milewski back for a
 third series of lectures on Category Theory. You can find links to his earlier lectures in our [courses section][courses]. These lectures are also being recorded. RSVP at [Meetup.com][category-theory].
