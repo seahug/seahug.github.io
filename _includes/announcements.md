@@ -1,7 +1,5 @@
 ## Announcements
 
-On Thursday 27 September 2018, [Vitaly Bragilevsky][vitaly], author of ["Haskell in Depth"][haskell-in-depth], will present a talk entitled ["The Glasgow Haskell Compiler as an exercise in type theory"][vitaly] at Indeed, Inc. in Seattle.
-
 On Thursday, July 19th we welcomed Bartosz Milewski back for a
 third series of lectures on Category Theory. You can find links to his earlier lectures in our [courses section][courses]. These lectures are also being recorded. RSVP at [Meetup.com][category-theory].
 
@@ -11,7 +9,6 @@ we covered [here][april-minutes].
 
 ## Other Haskell/FP events
 
-* [Seattle Lambda World][seattle-lambda-world]<br/>Seattle, 2018/9/17&ndash;2018/9/18
 * [ICFP 2018][icfp2018]<br/>St. Louis, 2018/9/23&ndash;2018/9/29
 * [Strange Loop][strange-loop]<br/>St. Louis, 2018/9/26&ndash;2018/9/28
 

@@ -2,6 +2,8 @@
 title: The Glasgow Haskell Compiler as an exercise in type theory
 layout: default
 ---
+# _Event cancelled_
+
 # The Glasgow Haskell Compiler as an exercise in type theory
 
 * Location: [Indeed, Inc., Russell office, 1301 2nd Avenue, 13th floor, Seattle, WA 98101][location]
