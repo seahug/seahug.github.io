@@ -9,8 +9,6 @@ Seattle's Haskell User Group since 2012
 
 {% include upcoming-meetup.html %}
 
-{% include announcements.md %}
-
 {% if site.categories.articles.size > 0 %}
 ## Recent articles
 {% include recent-articles.html limit="2" %}
