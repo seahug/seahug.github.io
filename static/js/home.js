@@ -21,6 +21,8 @@ var MONTH_NAMES = [
   "November",
   "December"
 ];
+/*
+// Pull upcoming events from Meetup API
 var UPCOMING_EVENTS_URL = "https://api.meetup.com/2/events" +
   "?offset=0" +
   "&format=json" +
@@ -34,6 +36,11 @@ var UPCOMING_EVENTS_URL = "https://api.meetup.com/2/events" +
   "&status=upcoming" +
   "&sig_id=9489517" +
   "&sig=40f5aa124deef9aa22ee964f7b3def3ebc531bd1";
+var UPCOMING_EVENTS_DATA_TYPE = "jsonp";
+*/
+// Pull upcoming events from hardcoded JSON
+var UPCOMING_EVENTS_URL = "/upcoming-events.json";
+var UPCOMING_EVENTS_DATA_TYPE = "json";
 
 function zeroFill(number, width) {
   var s = number.toString();
@@ -83,7 +90,7 @@ function formatDateTime(d) {
 
 function fetchUpcomingEvents(url, successCallback, errorCallback) {
   var ajaxData = {
-    dataType: "jsonp",
+    dataType: UPCOMING_EVENTS_DATA_TYPE,
     method: "get",
     url: url
   };
