@@ -21,26 +21,35 @@ var MONTH_NAMES = [
   "November",
   "December"
 ];
-/*
-// Pull upcoming events from Meetup API
-var UPCOMING_EVENTS_URL = "https://api.meetup.com/2/events" +
-  "?offset=0" +
-  "&format=json" +
-  "&limited_events=False" +
-  "&group_urlname=seahug" +
-  "&photo-host=public" +
-  "&page=5" +
-  "&fields=" +
-  "&order=time" +
-  "&desc=false" +
-  "&status=upcoming" +
-  "&sig_id=9489517" +
-  "&sig=40f5aa124deef9aa22ee964f7b3def3ebc531bd1";
-var UPCOMING_EVENTS_DATA_TYPE = "jsonp";
-*/
-// Pull upcoming events from hardcoded JSON
-var UPCOMING_EVENTS_URL = "/upcoming-events.json";
-var UPCOMING_EVENTS_DATA_TYPE = "json";
+
+var UPCOMING_EVENTS_API = (function (isMeetup) {
+  if (isMeetup) {
+    // Pull upcoming events from Meetup API
+    return {
+      url: "https://api.meetup.com/2/events" +
+        "?offset=0" +
+        "&format=json" +
+        "&limited_events=False" +
+        "&group_urlname=seahug" +
+        "&photo-host=public" +
+        "&page=5" +
+        "&fields=" +
+        "&order=time" +
+        "&desc=false" +
+        "&status=upcoming" +
+        "&sig_id=9489517" +
+        "&sig=40f5aa124deef9aa22ee964f7b3def3ebc531bd1",
+      dataType: "jsonp"
+    };
+  }
+  else {
+    // Pull upcoming events from hardcoded JSON
+    return {
+      url: "/upcoming-events.json",
+      dataType: "json"
+    };
+  }
+})(false);
 
 function zeroFill(number, width) {
   var s = number.toString();
@@ -88,11 +97,11 @@ function formatDateTime(d) {
   return formatDate(d) + " at " + formatTime(d);
 }
 
-function fetchUpcomingEvents(url, successCallback, errorCallback) {
+function fetchUpcomingEvents(api, successCallback, errorCallback) {
   var ajaxData = {
-    dataType: UPCOMING_EVENTS_DATA_TYPE,
+    dataType: api.dataType,
     method: "get",
-    url: url
+    url: api.url
   };
 
   if (successCallback) {
@@ -156,7 +165,7 @@ function nextUpcomingEvents(events) {
 }
 
 $(function () {
-  fetchUpcomingEvents(UPCOMING_EVENTS_URL, function (events) {
+  fetchUpcomingEvents(UPCOMING_EVENTS_API, function (events) {
     var upcomingEvents = nextUpcomingEvents(events);
     var html = "<ul class=\"relaxed\" style=\"padding-left: 2em\">";
     for (var i = 0; i < upcomingEvents.length; ++i ) {
