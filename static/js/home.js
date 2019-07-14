@@ -128,50 +128,38 @@ function fetchUpcomingEvents(api, successCallback, errorCallback) {
   $.ajax(ajaxData);
 }
 
-function firstUpcomingEventBy(events, f) {
-  for (var i = 0; i < events.length; ++i) {
-    var e = events[i];
-    if (f(e)) {
-      return e;
-    }
-  }
-
-  return null;
-}
-
-function nextUpcomingEvents(events) {
-  var upcomingEvents = [];
-
-  // Always include next "General discussion" event
-  var e0 = firstUpcomingEventBy(
-      events,
-      function (e) { return e.name == "General discussion"; });
-  if (e0) { upcomingEvents.push(e0); }
-
-  // Include next event of any other type
-  var e1 = firstUpcomingEventBy(
-      events,
-      function (e) { return e.name != "General discussion"; });
-  if (e1) { upcomingEvents.push(e1); }
-
-  // Make sure they're in the right order!!
-  upcomingEvents.sort(function (a, b) {
-    if (a.time < b.time) { return -1; }
-    if (a.time > b.time) { return 1; }
-    return 0;
-  });
-
-  return upcomingEvents;
-}
-
 $(function () {
   fetchUpcomingEvents(UPCOMING_EVENTS_API, function (events) {
-    var upcomingEvents = nextUpcomingEvents(events);
+    var midnightToday = new Date().withUTCHours(0, 0, 0, 0);
+    var eventGroups = events
+      .filter(e => e.time.compareTo(midnightToday) >= 0)
+      .orderBy((a, b) => a.time.compareTo(b.time))
+      .groupBy(e => e.name === "General discussion");
+    var generalDiscussionEvents = eventGroups[true] || [];
+    var otherEvents = eventGroups[false] || [];
+    var upcomingEvents = generalDiscussionEvents
+      .slice(0, 2)
+      .concat(otherEvents.slice(0, 2))
+      .orderBy((a, b) => a.time.compareTo(b.time));
+
     var html = "<ul class=\"relaxed\" style=\"padding-left: 2em\">";
     for (var i = 0; i < upcomingEvents.length; ++i ) {
       var e = upcomingEvents[i];
-      html += "<li><a href=\"" + e.url + "\">" + e.name + "</a><br/>";
+      if (e.url) {
+        html += "<li><a href=\"" + e.url + "\">";
+      }
+      else {
+        html += "<li>";
+      }
+      html += "<strong>";
+      html += e.name;
+      html += "</strong>";
+      if (e.url) {
+        html += "</a>";
+      }
+      html += "<br/>";
       html += "<span>" + formatDateTime(new Date(e.time)) + "</span>";
+      html += "</li>";
     }
     html += "</ul>";
     $("#upcoming-events")
