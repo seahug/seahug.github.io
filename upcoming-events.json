@@ -1,28 +1,36 @@
 {
-  "results": [
+  "venues": [
+    {
+      "id": "everest",
+      "name": "Amazon Everest",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=425+106th+Avenue+NE%2C+Bellevue%2C+WA%2C+98004%2C+us",
+      "address": "425 106th Avenue NE, Bellevue, WA 98004"
+    }
+  ],
+  "events": [
     {
       "name": "General discussion",
-      "venue_html": "<a href=\"https://www.google.com/maps/search/?api=1&query=425+106th+Avenue+NE%2C+Bellevue%2C+wa%2C+98004%2C+us\">Amazon Everest</a>, 425 106th Avenue NE, Bellevue, WA 98004",
+      "venue_id": "everest",
       "time": "2019-07-20T20:00:00.000Z"
     },
     {
       "name": "General discussion",
-      "venue_html": "<a href=\"https://www.google.com/maps/search/?api=1&query=425+106th+Avenue+NE%2C+Bellevue%2C+wa%2C+98004%2C+us\">Amazon Everest</a>, 425 106th Avenue NE, Bellevue, WA 98004",
+      "venue_id": "everest",
       "time": "2019-08-17T20:00:00.000Z"
     },
     {
       "name": "General discussion",
-      "venue_html": "<a href=\"https://www.google.com/maps/search/?api=1&query=425+106th+Avenue+NE%2C+Bellevue%2C+wa%2C+98004%2C+us\">Amazon Everest</a>, 425 106th Avenue NE, Bellevue, WA 98004",
+      "venue_id": "everest",
       "time": "2019-09-21T20:00:00.000Z"
     },
     {
       "name": "General discussion",
-      "venue_html": "<a href=\"https://www.google.com/maps/search/?api=1&query=425+106th+Avenue+NE%2C+Bellevue%2C+wa%2C+98004%2C+us\">Amazon Everest</a>, 425 106th Avenue NE, Bellevue, WA 98004",
+      "venue_id": "everest",
       "time": "2019-10-19T20:00:00.000Z"
     },
     {
       "name": "General discussion",
-      "venue_html": "<a href=\"https://www.google.com/maps/search/?api=1&query=425+106th+Avenue+NE%2C+Bellevue%2C+wa%2C+98004%2C+us\">Amazon Everest</a>, 425 106th Avenue NE, Bellevue, WA 98004",
+      "venue_id": "everest",
       "time": "2019-11-16T21:00:00.000Z"
     }
   ]

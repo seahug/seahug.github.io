@@ -106,17 +106,33 @@ function fetchUpcomingEvents(api, successCallback, errorCallback) {
 
   if (successCallback) {
     ajaxData.success = function (data, status, xhr) {
+      var venues = $.map(
+        data.venues || [],
+        function (x) {
+          return {
+            id: x["id"],
+            name: x["name"],
+            mapUrl: x["map_url"],
+            address: x["address"]
+          };
+        }
+      ).reduce(function (acc, obj) {
+        acc[obj.id] = obj;
+        return acc;
+      }, {});
       var events = $.map(
-          data.results,
-          function (x) {
-            return {
-              url: x["event_url"],
-              name: x["name"],
-              venueHtml: x["venue_html"],
-              time: new Date(x["time"])
-            };
-          });
-      successCallback(events);
+        data.events || [],
+        function (x) {
+          return {
+            venueId: x["venue_id"],
+            url: x["event_url"],
+            name: x["name"],
+            venueHtml: x["venue_html"],
+            time: new Date(x["time"])
+          };
+        }
+      );
+      successCallback(venues, events);
     };
   }
 
@@ -130,7 +146,7 @@ function fetchUpcomingEvents(api, successCallback, errorCallback) {
 }
 
 $(function () {
-  fetchUpcomingEvents(UPCOMING_EVENTS_API, function (events) {
+  fetchUpcomingEvents(UPCOMING_EVENTS_API, function (venues, events) {
     var midnightToday = new Date().withUTCHours(0, 0, 0, 0);
     var eventGroups = events
       .filter(e => e.time.compareTo(midnightToday) >= 0)
@@ -146,6 +162,7 @@ $(function () {
     var html = "<ul class=\"relaxed\" style=\"padding-left: 2em\">";
     for (var i = 0; i < upcomingEvents.length; ++i ) {
       var e = upcomingEvents[i];
+      var venue = venues[e.venueId];
 
       html += "<li>";
 
@@ -163,10 +180,11 @@ $(function () {
 
       html += "<span>" + formatDateTime(new Date(e.time)) + "</span>";
 
-      if (e.venueHtml) {
-        html += "<br/>";
-        html += "<span>" + e.venueHtml + "</span>";
-      }
+      html += "<br/>";
+      html += "<span>";
+      html += "<a href=\"" + venue.mapUrl + "\">" + venue.name + "</a>";
+      html += ", " + venue.address;
+      html += "</span>";
 
       html += "</li>";
     }
