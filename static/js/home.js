@@ -110,9 +110,10 @@ function fetchUpcomingEvents(api, successCallback, errorCallback) {
           data.results,
           function (x) {
             return {
-              url: x.event_url,
-              name: x.name,
-              time: new Date(x.time)
+              url: x["event_url"],
+              name: x["name"],
+              venueHtml: x["venue_html"],
+              time: new Date(x["time"])
             };
           });
       successCallback(events);
@@ -145,11 +146,11 @@ $(function () {
     var html = "<ul class=\"relaxed\" style=\"padding-left: 2em\">";
     for (var i = 0; i < upcomingEvents.length; ++i ) {
       var e = upcomingEvents[i];
+
+      html += "<li>";
+
       if (e.url) {
-        html += "<li><a href=\"" + e.url + "\">";
-      }
-      else {
-        html += "<li>";
+        html += "<a href=\"" + e.url + "\">";
       }
       html += "<strong>";
       html += e.name;
@@ -157,8 +158,16 @@ $(function () {
       if (e.url) {
         html += "</a>";
       }
+
       html += "<br/>";
+
       html += "<span>" + formatDateTime(new Date(e.time)) + "</span>";
+
+      if (e.venueHtml) {
+        html += "<br/>";
+        html += "<span>" + e.venueHtml + "</span>";
+      }
+
       html += "</li>";
     }
     html += "</ul>";
