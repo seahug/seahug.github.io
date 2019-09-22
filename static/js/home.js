@@ -190,6 +190,6 @@ $(function () {
     }
     html += "</ul>";
     $("#upcoming-events")
-      .html("<p>Upcoming events:</p>" + html);
+      .html("<h2>Upcoming events</h2>" + html);
   });
 });
