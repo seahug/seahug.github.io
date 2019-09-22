@@ -11,6 +11,10 @@ Seattle's Haskell User Group since 2012
 
 {% include upcoming-meetup.html %}
 
+## Google Group
+
+[Seattle Haskell Google Group][google-group]
+
 {% if site.categories.articles.size > 0 %}
 ## Recent articles
 {% include recent-articles.html limit="2" %}
@@ -25,3 +29,5 @@ Seattle's Haskell User Group since 2012
 ## Haskell Learners' Group
 {% include recent-learners.html limit="2" %}
 {% endif %}
+
+[google-group]: https://groups.google.com/d/forum/seattlehaskell
