@@ -11,6 +11,10 @@ Seattle's Haskell User Group since 2012
 
 {% include upcoming-meetup.html %}
 
+Richard has stepped down as organizer of this group and, so, the October 19th
+meeting will be our last in-person meeting until a new organizer is found and a
+new venue secured.
+
 {% include google-group.html %}
 
 {% if site.categories.articles.size > 0 %}
