@@ -5,6 +5,12 @@
       "name": "Amazon Everest",
       "map_url": "https://www.google.com/maps/search/?api=1&query=425+106th+Avenue+NE%2C+Bellevue%2C+WA%2C+98004%2C+us",
       "address": "425 106th Avenue NE, Bellevue, WA 98004"
+    },
+    {
+      "id": "montlake-library",
+      "name": "Montlake Library Meeting Room",
+      "map_url": "https://goo.gl/maps/YqBQKFbXUaEwckBr5",
+      "address": "2401 24th ave. E., Seattle, WA 98112"
     }
   ],
   "events": [
@@ -27,6 +33,11 @@
       "name": "General discussion",
       "venue_id": "everest",
       "time": "2019-10-19T20:00:00.000Z"
+    },
+    {
+      "name": "General discussion",
+      "venue_id": "montlake-library",
+      "time": "2019-11-23T20:00:00.000Z"
     }
   ]
 }
