@@ -11,9 +11,10 @@ Seattle's Haskell User Group since 2012
 
 {% include upcoming-meetup.html %}
 
-Richard has stepped down as organizer of this group and, so, the October 19th
-meeting will be our last in-person meeting until a new organizer is found and a
-new venue secured.
+After 6 years of dedicated leadership, Richard has stepped down as organizer.
+This group is now in a state of anarchy, but Brian Bascoy has reserved a meeting
+room in the Montlake library for our November meeting. If you'd like to present,
+feel free to post your topic to the google group.
 
 {% include google-group.html %}
 
