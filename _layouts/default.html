@@ -42,7 +42,31 @@
           {% if site.categories.learners.size > 0 %}
           {% if page.url == '/learners.html' %}<li class="active">{% else %}<li>{% endif %}<a href="{{ "/learners" | relative_url }}">Learners</a></li>
           {% endif %}
-          <li><a href="https://discord.gg/vBfGp7S">Discord</a></li>
+          <li>
+            <a
+              href="#"
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false">
+              Social
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                  <a href="https://seahug.herokuapp.com/">
+                    <img src="https://seahug.herokuapp.com/badge.svg"/>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://discord.gg/vBfGp7S">Discord</a>
+                </li>
+                <li>
+                  <a href="https://groups.google.com/d/forum/seattlehaskell">Google Group</a>
+                </li>
+            </ul>
+          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
