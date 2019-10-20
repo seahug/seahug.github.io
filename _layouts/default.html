@@ -31,33 +31,33 @@
       </div>
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="nav navbar-nav">
-            {% if page.url == '/' %}<li class="active">{% else %}<li>{% endif %}<a href="{{ "/" | relative_url }}">Home</a></li>
+          {% if page.url == '/' %}<li class="active">{% else %}<li>{% endif %}<a href="{{ "/" | relative_url }}">Home</a></li>
           <li>
-              <a
-                href="#"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false">
-                Social
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                  <li>
-                    <a href="https://seahug.herokuapp.com/">
-                      <img src="https://seahug.herokuapp.com/badge.svg"/>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://discord.gg/vBfGp7S">Discord</a>
-                  </li>
-                  <li>
-                    <a href="https://groups.google.com/d/forum/seattlehaskell">Google Group</a>
-                  </li>
-              </ul>
-            </li>
-                {% if page.url == '/courses/' %}<li class="active">{% else %}<li>{% endif %}<a href="{{ "/courses" | relative_url }}">Courses</a></li>
+            <a
+              href="#"
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false">
+              Social
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                  <a href="https://seahug.herokuapp.com/">
+                    <img src="https://seahug.herokuapp.com/badge.svg"/>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://discord.gg/vBfGp7S">Discord</a>
+                </li>
+                <li>
+                  <a href="https://groups.google.com/d/forum/seattlehaskell">Google Group</a>
+                </li>
+            </ul>
+          </li>
+          {% if page.url == '/courses/' %}<li class="active">{% else %}<li>{% endif %}<a href="{{ "/courses" | relative_url }}">Courses</a></li>
           {% if site.categories.articles.size > 0 %}
           {% if page.url == '/articles.html' %}<li class="active">{% else %}<li>{% endif %}<a href="{{ "/articles" | relative_url }}">Articles</a></li>
           {% endif %}
